@@ -7,5 +7,6 @@
     <string name="welcome_text">Mensajes edificantes, donde estes</string>
     <string name="welcome_text_footer">Beraka, valle de bendicion</string>
     <string name="login">Entra!</string>
+    <string name="title_activity_music">Music</string>
 
 </resources>
