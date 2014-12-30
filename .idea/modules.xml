@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BerakaMusic.iml" filepath="$PROJECT_DIR$/BerakaMusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Beraka_Music_Android.iml" filepath="$PROJECT_DIR$/Beraka_Music_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
