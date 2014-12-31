@@ -3,6 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-    </style>
 
+
+    </style>
+    <color name="primary_dark">#880E4F</color>
+    <color name="primary">#E91E63</color>
+    <color name="accent">#FFFF00</color>
+    <color name="main_background">#000</color>
+    <color name="light_gray_font">#ff9f9f9f</color>
 </resources>
