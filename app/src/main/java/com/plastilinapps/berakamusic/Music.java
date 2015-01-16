@@ -2,19 +2,36 @@ package com.plastilinapps.berakamusic;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+import fragments.FriendsFragment;
+import fragments.ProfileFragment;
+import fragments.TopListFragment;
 
 
 public class Music extends Activity implements ActionBar.TabListener{
-
+    private Fragment[] fragments = new Fragment[]{
+            new TopListFragment(),
+            new FriendsFragment(),
+            new ProfileFragment()
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
 
         setTabs();
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+
+        for(Fragment fragment: fragments){
+            fragmentTransaction.add(R.id.main_music, fragment).hide(fragment);
+        }
+        fragmentTransaction.show(fragments[0]).commit();
+
     }
     private void setTabs(){
         ActionBar actionBar = getActionBar();
@@ -25,7 +42,11 @@ public class Music extends Activity implements ActionBar.TabListener{
     }
 
     @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+        for(Fragment fragment: fragments){
+            fragmentTransaction.hide(fragment);
+        }
+        fragmentTransaction.show(fragments[tab.getPosition()]);
 
     }
 
